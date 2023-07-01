@@ -1,0 +1,24 @@
+[versions]
+androidGradlePluginVersion = "8.0.2"
+androidxComposeBomVersion = "2023.06.01"
+androidxCoreKtxVersion = "1.10.1"
+jetbrainsKotlinAndroidVersion = "1.7.20"
+jetbrainsKotlinBomVersion = "1.8.22"
+junitVersion = "4.13.2"
+yasanSpineVersion = "4.0.3"
+
+[libraries]
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBomVersion" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtxVersion" }
+jetbrains-kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref = "jetbrainsKotlinBomVersion" }
+junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
+yasan-spine = { group = "com.github.yasanglass", name = "spine", version.ref = "yasanSpineVersion" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "androidGradlePluginVersion" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "jetbrainsKotlinAndroidVersion" }
