@@ -12,7 +12,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import glass.yasan.spine.compose.type.rubikFamily
-import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
 public fun Text(
