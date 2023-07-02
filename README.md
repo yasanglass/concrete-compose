@@ -4,7 +4,7 @@
 [![](https://jitpack.io/v/yasanglass/stillbirth-android.svg)](https://jitpack.io/#yasanglass/stillbirth-android)
 [![](https://jitpack.io/v/yasanglass/stillbirth-android/month.svg)](https://jitpack.io/#yasanglass/stillbirth-android)
 
-WIP reconstruction of my original design langauge in Jetpack Compose. 
+WIP reconstruction of my original design language in Jetpack Compose. 
 
 ## Download
 
