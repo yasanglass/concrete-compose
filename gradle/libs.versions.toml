@@ -3,7 +3,7 @@ androidGradlePluginVersion = "8.0.2"
 androidxComposeBomVersion = "2023.06.01"
 androidxCoreKtxVersion = "1.10.1"
 jetbrainsKotlinAndroidVersion = "1.7.20"
-jetbrainsKotlinBomVersion = "1.8.22"
+jetbrainsKotlinBomVersion = "1.9.0"
 junitVersion = "4.13.2"
 yasanSpineVersion = "4.0.3"
 
