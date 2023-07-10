@@ -1,6 +1,5 @@
 package glass.yasan.stillbirth.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -13,7 +12,7 @@ fun ProgressBarCircular(
     color: Color = StillbirthTheme.colors.layerForeground,
 ) {
     CircularProgressIndicator(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier,
         color = color,
     )
 }
