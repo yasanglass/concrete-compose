@@ -1,4 +1,4 @@
-package glass.yasan.stillbirth.components
+package glass.yasan.stillbirth.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.TextUnit
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-public fun TextTitle(
+public fun TextDescription(
     text: String,
     modifier: Modifier = Modifier,
     fontSize: TextUnit = TextUnit.Unspecified,
@@ -30,7 +30,7 @@ public fun TextTitle(
     Text(
         text = text,
         modifier = modifier,
-        color = StillbirthTheme.textColors.title,
+        color = StillbirthTheme.textColors.description,
         fontSize = fontSize,
         fontStyle = fontStyle,
         fontWeight = fontWeight,

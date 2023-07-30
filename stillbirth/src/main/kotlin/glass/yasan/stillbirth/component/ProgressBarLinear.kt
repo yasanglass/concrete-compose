@@ -1,4 +1,4 @@
-package glass.yasan.stillbirth.components
+package glass.yasan.stillbirth.component
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.LinearProgressIndicator

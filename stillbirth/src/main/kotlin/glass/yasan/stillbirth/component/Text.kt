@@ -1,22 +1,27 @@
-package glass.yasan.stillbirth.components
+package glass.yasan.stillbirth.component
 
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
-import glass.yasan.stillbirth.theme.StillbirthTheme
+import glass.yasan.spine.compose.type.rubikFamily
 
 @Composable
-public fun TextDescription(
+public fun Text(
     text: String,
+    color: Color,
     modifier: Modifier = Modifier,
     fontSize: TextUnit = TextUnit.Unspecified,
     fontStyle: FontStyle? = null,
     fontWeight: FontWeight? = null,
+    fontFamily: FontFamily? = rubikFamily,
     letterSpacing: TextUnit = TextUnit.Unspecified,
     textDecoration: TextDecoration? = null,
     textAlign: TextAlign? = null,
@@ -30,10 +35,11 @@ public fun TextDescription(
     Text(
         text = text,
         modifier = modifier,
-        color = StillbirthTheme.textColors.description,
+        color = color,
         fontSize = fontSize,
         fontStyle = fontStyle,
         fontWeight = fontWeight,
+        fontFamily = fontFamily,
         letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,

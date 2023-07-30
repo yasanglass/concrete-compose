@@ -1,4 +1,4 @@
-package glass.yasan.stillbirth.components
+package glass.yasan.stillbirth.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-fun TopBar(
+fun BottomBar(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
@@ -17,7 +17,7 @@ fun TopBar(
             .background(color = StillbirthTheme.colors.layerForeground)
             .fillMaxWidth(),
     ) {
-        content()
         Divider()
+        content()
     }
 }

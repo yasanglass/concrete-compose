@@ -1,4 +1,4 @@
-package glass.yasan.stillbirth.components
+package glass.yasan.stillbirth.component
 
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable

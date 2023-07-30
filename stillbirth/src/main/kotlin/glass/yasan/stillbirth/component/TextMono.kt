@@ -1,4 +1,4 @@
-package glass.yasan.stillbirth.components
+package glass.yasan.stillbirth.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
