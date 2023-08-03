@@ -7,42 +7,65 @@ import androidx.compose.ui.graphics.Color
 
 @Immutable
 class Colors(
-    var layerForeground: Color,
-    var layerMidground: Color,
-    var layerBackground: Color,
-    var layerBackgroundOpposite: Color,
-    var textTitle: Color,
-    var textDescription: Color,
+    var content: Content,
+    var layer: Layer,
     var isLight: Boolean,
 ) {
 
-    fun copy(
-        layerForeground: Color = this.layerForeground,
-        layerMidground: Color = this.layerMidground,
-        layerBackground: Color = this.layerBackground,
-        layerBackgroundOpposite: Color = this.layerBackgroundOpposite,
-        textTitle: Color = this.textTitle,
-        textDescription: Color = this.textDescription,
-        isLight: Boolean = this.isLight,
-    ) = Colors(
-        layerForeground = layerForeground,
-        layerMidground = layerMidground,
-        layerBackground = layerBackground,
-        layerBackgroundOpposite = layerBackgroundOpposite,
-        textTitle = textTitle,
-        textDescription = textDescription,
+    constructor(
+        contentMajor: Color,
+        contentMinor: Color,
+        layerForeground: Color,
+        layerMidground: Color,
+        layerBackground: Color,
+        layerBackgroundOpposite: Color,
+        isLight: Boolean,
+    ) : this(
+        content = Content(
+            major = contentMajor,
+            minor = contentMinor,
+        ),
+        layer = Layer(
+            foreground = layerForeground,
+            midground = layerMidground,
+            background = layerBackground,
+            backgroundOpposite = layerBackgroundOpposite,
+        ),
         isLight = isLight,
     )
 
-    fun updateColorsFrom(other: Colors) {
-        layerForeground = other.layerForeground
-        layerMidground = other.layerMidground
-        layerBackground = other.layerBackground
-        layerBackgroundOpposite = other.layerBackgroundOpposite
-        textTitle = other.textTitle
-        textDescription = other.textDescription
+    class Content(
+        val major: Color,
+        val minor: Color,
+    )
+
+    class Layer(
+        val foreground: Color,
+        val midground: Color,
+        val background: Color,
+        val backgroundOpposite: Color,
+    )
+
+    fun copy(
+        content: Content = this.content,
+        layer: Layer = this.layer,
+        isLight: Boolean = this.isLight,
+    ) = Colors(
+        content = content,
+        layer = layer,
+        isLight = isLight,
+    )
+
+    fun updateColorsFrom(
+        other: Colors,
+    ) {
+        content = other.content
+        layer = other.layer
         isLight = other.isLight
     }
 }
 
-internal val LocalColors: ProvidableCompositionLocal<Colors> = compositionLocalOf { lightColors() }
+internal val LocalColors: ProvidableCompositionLocal<Colors> =
+    compositionLocalOf {
+        lightColors()
+    }

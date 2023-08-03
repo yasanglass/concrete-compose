@@ -9,7 +9,7 @@ import glass.yasan.stillbirth.theme.StillbirthTheme
 @Composable
 fun ProgressBarCircular(
     modifier: Modifier = Modifier,
-    color: Color = StillbirthTheme.colors.textTitle,
+    color: Color = StillbirthTheme.colors.content.major,
 ) {
     CircularProgressIndicator(
         modifier = modifier,

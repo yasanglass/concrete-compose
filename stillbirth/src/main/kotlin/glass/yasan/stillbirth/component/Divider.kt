@@ -11,7 +11,7 @@ public fun Divider(
 ) {
 
     Divider(
-        color = StillbirthTheme.colors.layerBackground,
+        color = StillbirthTheme.colors.layer.background,
         modifier = modifier,
     )
 }

@@ -14,7 +14,7 @@ fun TopBar(
 ) {
     Column(
         modifier = modifier
-            .background(color = StillbirthTheme.colors.layerForeground)
+            .background(color = StillbirthTheme.colors.layer.foreground)
             .fillMaxWidth(),
     ) {
         content()

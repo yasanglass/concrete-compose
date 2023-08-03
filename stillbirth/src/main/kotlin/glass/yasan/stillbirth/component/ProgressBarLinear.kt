@@ -10,7 +10,7 @@ import glass.yasan.stillbirth.theme.StillbirthTheme
 @Composable
 fun ProgressBarLinear(
     modifier: Modifier = Modifier,
-    color: Color = StillbirthTheme.colors.textTitle,
+    color: Color = StillbirthTheme.colors.content.major,
 ) {
     LinearProgressIndicator(
         modifier = modifier.fillMaxWidth(),
