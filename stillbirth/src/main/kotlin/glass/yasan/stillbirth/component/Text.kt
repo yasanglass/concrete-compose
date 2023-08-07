@@ -1,6 +1,5 @@
 package glass.yasan.stillbirth.component
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -12,6 +11,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import glass.yasan.spine.compose.type.rubikFamily
+import androidx.compose.material3.Text as Material3Text
 
 @Composable
 public fun Text(
@@ -32,7 +32,7 @@ public fun Text(
     minLines: Int = 1,
 ) {
 
-    Text(
+    Material3Text(
         text = text,
         modifier = modifier,
         color = color,
