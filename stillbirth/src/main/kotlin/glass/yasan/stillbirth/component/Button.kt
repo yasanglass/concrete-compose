@@ -13,7 +13,7 @@ import glass.yasan.stillbirth.theme.StillbirthTheme
 import androidx.compose.material3.Button as Material3Button
 
 @Composable
-private fun Button(
+fun Button(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -33,7 +33,7 @@ private fun Button(
 }
 
 @Composable
-private fun Button(
+fun Button(
     content: @Composable RowScope.() -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
