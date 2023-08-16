@@ -1,61 +1,44 @@
 package glass.yasan.stillbirth.component
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.unit.Dp
+import glass.yasan.spine.compose.util.adaptiveContentColor
 import glass.yasan.stillbirth.theme.StillbirthTheme
-import androidx.compose.material3.Button as Material3Button
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun Button(
-    text: String,
+    content: @Composable (Color) -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    borderColor: Color? = StillbirthTheme.colors.layer.background,
+    shape: Shape = RectangleShape,
+    backgroundColor: Color = StillbirthTheme.colors.layer.foreground,
+    contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
+    borderWidth: Dp? = StillbirthTheme.sizes.borderStrokeWidth,
+    enabled: Boolean = true,
 ) {
-    Button(
-        onClick = onClick,
-        modifier = modifier,
-        borderColor = borderColor,
-        content = {
-            Text(
-                text = text.uppercase(),
-                color = StillbirthTheme.colors.content.major,
-            )
-        }
-    )
-}
 
-@Composable
-fun Button(
-    content: @Composable RowScope.() -> Unit,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    borderColor: Color? = StillbirthTheme.colors.layer.background,
-) {
-    Material3Button(
-        modifier = modifier,
+    Surface(
         onClick = onClick,
-        shape = RectangleShape,
-        contentPadding = PaddingValues(16.dp),
-        colors = ButtonDefaults.buttonColors(
-            containerColor = StillbirthTheme.colors.layer.foreground,
-            contentColor = StillbirthTheme.colors.content.major,
-            disabledContainerColor = StillbirthTheme.colors.layer.midground,
-            disabledContentColor = StillbirthTheme.colors.content.minor,
-        ),
-        border = borderColor?.let {
+        enabled = enabled,
+        shape = shape,
+        color = backgroundColor,
+        border = if (borderWidth != null) {
             BorderStroke(
-                width = 1.dp,
-                color = it,
+                width = borderWidth,
+                color = contentColor,
             )
+        } else {
+            null
         },
-        content = content,
+        content = { content(contentColor) },
+        modifier = modifier,
     )
 }

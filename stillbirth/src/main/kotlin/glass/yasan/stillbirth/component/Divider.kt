@@ -12,6 +12,7 @@ public fun Divider(
 
     Material3Divider(
         color = StillbirthTheme.colors.layer.background,
+        thickness = StillbirthTheme.sizes.borderStrokeWidth,
         modifier = modifier,
     )
 }
