@@ -21,7 +21,10 @@ fun Button(
     shape: Shape = RectangleShape,
     backgroundColor: Color = StillbirthTheme.colors.layer.foreground,
     contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
-    borderWidth: Dp? = StillbirthTheme.sizes.borderStrokeWidth,
+    border: BorderStroke? = BorderStroke(
+        width = StillbirthTheme.sizes.borderStrokeWidth,
+        color = contentColor,
+    ),
     enabled: Boolean = true,
 ) {
 
@@ -30,14 +33,7 @@ fun Button(
         enabled = enabled,
         shape = shape,
         color = backgroundColor,
-        border = if (borderWidth != null) {
-            BorderStroke(
-                width = borderWidth,
-                color = contentColor,
-            )
-        } else {
-            null
-        },
+        border = border,
         content = { content(contentColor) },
         modifier = modifier,
     )

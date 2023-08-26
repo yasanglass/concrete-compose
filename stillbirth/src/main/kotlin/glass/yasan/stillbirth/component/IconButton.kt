@@ -1,5 +1,6 @@
 package glass.yasan.stillbirth.component
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
@@ -23,7 +24,10 @@ fun IconButton(
     shape: Shape = CircleShape,
     backgroundColor: Color = StillbirthTheme.colors.layer.foreground,
     contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
-    borderWidth: Dp? = StillbirthTheme.sizes.borderStrokeWidth,
+    border: BorderStroke? = BorderStroke(
+        width = StillbirthTheme.sizes.borderStrokeWidth,
+        color = contentColor,
+    ),
     enabled: Boolean = true,
 ) {
 
@@ -46,7 +50,7 @@ fun IconButton(
         shape = shape,
         backgroundColor = backgroundColor,
         contentColor = contentColor,
-        borderWidth = borderWidth,
+        border = border,
         enabled = enabled,
     )
 }
