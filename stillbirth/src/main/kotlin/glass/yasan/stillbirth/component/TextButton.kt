@@ -26,7 +26,7 @@ fun TextButton(
     contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
     border: BorderStroke? = BorderStroke(
         width = StillbirthTheme.sizes.borderStrokeWidth,
-        color = contentColor,
+        color = StillbirthTheme.colors.layer.background,
     ),
     enabled: Boolean = true,
 ) {
