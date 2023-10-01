@@ -46,7 +46,6 @@ public fun TextButton(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
                 modifier = contentModifier
-                    .fillMaxWidth()
                     .padding(16.dp),
             ) {
                 if (iconStart != null) {
