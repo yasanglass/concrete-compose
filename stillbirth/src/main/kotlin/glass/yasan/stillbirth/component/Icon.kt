@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-fun Icon(
+public fun Icon(
     imageVector: ImageVector,
     contentDescription: String?,
     modifier: Modifier = Modifier,
@@ -26,7 +26,7 @@ fun Icon(
 }
 
 @Composable
-fun Icon(
+public fun Icon(
     painter: Painter,
     contentDescription: String?,
     modifier: Modifier = Modifier,
@@ -42,7 +42,7 @@ fun Icon(
 }
 
 @Composable
-fun Icon(
+public fun Icon(
     bitmap: ImageBitmap,
     contentDescription: String?,
     modifier: Modifier = Modifier,

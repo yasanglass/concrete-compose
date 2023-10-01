@@ -23,7 +23,7 @@ import glass.yasan.stillbirth.theme.StillbirthTheme
 
 
 @Composable
-fun TextButton(
+public fun TextButton(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,

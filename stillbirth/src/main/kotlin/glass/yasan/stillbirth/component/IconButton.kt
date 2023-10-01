@@ -15,7 +15,7 @@ import glass.yasan.spine.compose.util.adaptiveContentColor
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-fun IconButton(
+public fun IconButton(
     imageVector: ImageVector,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,

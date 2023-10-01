@@ -42,3 +42,7 @@ dependencies {
 
     implementation libs.yasan.spine
 }
+
+kotlin {
+    explicitApi()
+}

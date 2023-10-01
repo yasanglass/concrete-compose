@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-fun ProgressBarCircular(
+public fun ProgressBarCircular(
     modifier: Modifier = Modifier,
     color: Color = StillbirthTheme.colors.content.major,
 ) {

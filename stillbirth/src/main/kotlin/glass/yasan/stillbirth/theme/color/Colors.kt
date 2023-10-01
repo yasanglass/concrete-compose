@@ -6,13 +6,13 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 @Immutable
-class Colors(
-    var content: Content,
-    var layer: Layer,
-    var isLight: Boolean,
+public class Colors(
+    public var content: Content,
+    public var layer: Layer,
+    public var isLight: Boolean,
 ) {
 
-    constructor(
+    public constructor(
         contentMajor: Color,
         contentMinor: Color,
         layerForeground: Color,
@@ -34,29 +34,29 @@ class Colors(
         isLight = isLight,
     )
 
-    class Content(
-        val major: Color,
-        val minor: Color,
+    public class Content(
+        public val major: Color,
+        public val minor: Color,
     )
 
-    class Layer(
-        val foreground: Color,
-        val midground: Color,
-        val background: Color,
-        val backgroundOpposite: Color,
+    public class Layer(
+        public val foreground: Color,
+        public val midground: Color,
+        public val background: Color,
+        public val backgroundOpposite: Color,
     )
 
-    fun copy(
+    public fun copy(
         content: Content = this.content,
         layer: Layer = this.layer,
         isLight: Boolean = this.isLight,
-    ) = Colors(
+    ): Colors = Colors(
         content = content,
         layer = layer,
         isLight = isLight,
     )
 
-    fun updateColorsFrom(
+    public fun updateColorsFrom(
         other: Colors,
     ) {
         content = other.content

@@ -27,12 +27,12 @@ public fun StillbirthTheme(
 
 public object StillbirthTheme {
 
-    val colors: Colors
+    public val colors: Colors
         @Composable
         @ReadOnlyComposable
         get() = LocalColors.current
 
-    val sizes: Sizes
+    public val sizes: Sizes
         @Composable
         @ReadOnlyComposable
         get() = LocalSizes.current

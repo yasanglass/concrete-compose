@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-fun TopBar(
+public fun TopBar(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {

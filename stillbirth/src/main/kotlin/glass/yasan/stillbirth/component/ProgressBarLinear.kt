@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.Color
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
-fun ProgressBarLinear(
+public fun ProgressBarLinear(
     modifier: Modifier = Modifier,
     color: Color = StillbirthTheme.colors.content.major,
 ) {

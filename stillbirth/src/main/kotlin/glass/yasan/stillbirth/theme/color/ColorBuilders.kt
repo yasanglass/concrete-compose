@@ -11,7 +11,7 @@ public fun lightColors(
     layerBackgroundOpposite: Color = ColorTokens.layerBackgroundOppositeLight,
     textTitle: Color = ColorTokens.contentMajorLight,
     textDescription: Color = ColorTokens.contentMinorLight,
-) = Colors(
+): Colors = Colors(
     content = Content(
         major = textTitle,
         minor = textDescription,
@@ -32,7 +32,7 @@ public fun darkColors(
     layerBackgroundOpposite: Color = ColorTokens.layerBackgroundOppositeDark,
     textTitle: Color = ColorTokens.contentMajorDark,
     textDescription: Color = ColorTokens.contentMinorDark,
-) = Colors(
+): Colors = Colors(
     layerForeground = layerForeground,
     layerMidground = layerMidground,
     layerBackground = layerBackground,

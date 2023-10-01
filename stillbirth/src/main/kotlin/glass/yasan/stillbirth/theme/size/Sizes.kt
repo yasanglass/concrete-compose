@@ -6,17 +6,17 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.unit.Dp
 
 @Immutable
-class Sizes(
-    var borderStrokeWidth: Dp,
+public class Sizes(
+    public var borderStrokeWidth: Dp,
 ) {
 
-    fun copy(
+    public fun copy(
         borderStrokeWidth: Dp = this.borderStrokeWidth,
-    ) = Sizes(
+    ): Sizes = Sizes(
         borderStrokeWidth = borderStrokeWidth,
     )
 
-    fun updateSizesFrom(
+    public fun updateSizesFrom(
         other: Sizes,
     ) {
         borderStrokeWidth = other.borderStrokeWidth

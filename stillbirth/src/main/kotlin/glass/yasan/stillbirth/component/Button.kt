@@ -13,7 +13,7 @@ import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun Button(
+public fun Button(
     content: @Composable (Color) -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
