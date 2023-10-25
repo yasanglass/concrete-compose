@@ -1,8 +1,7 @@
 package glass.yasan.stillbirth.component
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Surface
+import androidx.compose.material3.Surface as Material3Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -11,7 +10,6 @@ import androidx.compose.ui.graphics.Shape
 import glass.yasan.spine.compose.util.adaptiveContentColor
 import glass.yasan.stillbirth.theme.StillbirthTheme
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 public fun Button(
     content: @Composable (Color) -> Unit,
@@ -27,7 +25,7 @@ public fun Button(
     enabled: Boolean = true,
 ) {
 
-    Surface(
+    Material3Surface(
         onClick = onClick,
         enabled = enabled,
         shape = shape,
