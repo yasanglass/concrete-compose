@@ -10,12 +10,13 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import glass.yasan.spine.compose.type.rubikMonoFamily
+import glass.yasan.stillbirth.theme.StillbirthTheme
 
 @Composable
 public fun TextMono(
     text: String,
-    color: Color,
     modifier: Modifier = Modifier,
+    color: Color = StillbirthTheme.colors.content.minor,
     fontSize: TextUnit = TextUnit.Unspecified,
     fontStyle: FontStyle? = null,
     fontWeight: FontWeight? = null,

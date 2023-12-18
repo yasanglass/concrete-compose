@@ -11,13 +11,14 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import glass.yasan.spine.compose.type.rubikFamily
+import glass.yasan.stillbirth.theme.StillbirthTheme
 import androidx.compose.material3.Text as Material3Text
 
 @Composable
 public fun Text(
     text: String,
-    color: Color,
     modifier: Modifier = Modifier,
+    color: Color = StillbirthTheme.colors.content.minor,
     fontSize: TextUnit = TextUnit.Unspecified,
     fontStyle: FontStyle? = null,
     fontWeight: FontWeight? = null,
