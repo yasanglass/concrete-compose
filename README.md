@@ -1,8 +1,8 @@
-# Stillbirth
+# Concrete
 
-[![Build](https://github.com/yasanglass/stillbirth-android/workflows/Build/badge.svg)](https://github.com/yasanglass/stillbirth-android/actions/workflows/build.yml)
-[![](https://jitpack.io/v/yasanglass/stillbirth-android.svg)](https://jitpack.io/#yasanglass/stillbirth-android)
-[![](https://jitpack.io/v/yasanglass/stillbirth-android/month.svg)](https://jitpack.io/#yasanglass/stillbirth-android)
+[![Build](https://github.com/yasanglass/concrete-compose/workflows/Build/badge.svg)](https://github.com/yasanglass/concrete-compose/actions/workflows/build.yml)
+[![](https://jitpack.io/v/yasanglass/concrete-compose.svg)](https://jitpack.io/#yasanglass/concrete-compose)
+[![](https://jitpack.io/v/yasanglass/concrete-compose/month.svg)](https://jitpack.io/#yasanglass/concrete-compose)
 
 WIP reconstruction of my original design language in Jetpack Compose. 
 
@@ -23,6 +23,6 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.yasanglass:stillbirth-android:<version>'
+    implementation 'com.github.yasanglass:concrete-compose:<version>'
 }
 ```
