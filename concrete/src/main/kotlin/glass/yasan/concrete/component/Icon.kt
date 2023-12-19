@@ -7,14 +7,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 
 @Composable
 public fun Icon(
     imageVector: ImageVector,
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = StillbirthTheme.colors.content.major,
+    tint: Color = ConcreteTheme.colors.content.major,
 ) {
 
     Material3Icon(
@@ -30,7 +30,7 @@ public fun Icon(
     painter: Painter,
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = StillbirthTheme.colors.content.major,
+    tint: Color = ConcreteTheme.colors.content.major,
 ) {
 
     Material3Icon(
@@ -46,7 +46,7 @@ public fun Icon(
     bitmap: ImageBitmap,
     contentDescription: String?,
     modifier: Modifier = Modifier,
-    tint: Color = StillbirthTheme.colors.content.major,
+    tint: Color = ConcreteTheme.colors.content.major,
 ) {
 
     Material3Icon(

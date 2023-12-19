@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import glass.yasan.spine.compose.util.adaptiveContentColor
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 
 @Composable
 public fun IconButton(
@@ -20,11 +20,11 @@ public fun IconButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     shape: Shape = CircleShape,
-    backgroundColor: Color = StillbirthTheme.colors.layer.foreground,
+    backgroundColor: Color = ConcreteTheme.colors.layer.foreground,
     contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
     border: BorderStroke? = BorderStroke(
-        width = StillbirthTheme.sizes.borderStrokeWidth,
-        color = StillbirthTheme.colors.layer.background,
+        width = ConcreteTheme.sizes.borderStrokeWidth,
+        color = ConcreteTheme.colors.layer.background,
     ),
     enabled: Boolean = true,
 ) {

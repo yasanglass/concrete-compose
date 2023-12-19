@@ -10,9 +10,9 @@ import glass.yasan.concrete.theme.size.LocalSizes
 import glass.yasan.concrete.theme.size.Sizes
 
 @Composable
-public fun StillbirthTheme(
-    colors: Colors = StillbirthTheme.colors,
-    sizes: Sizes = StillbirthTheme.sizes,
+public fun ConcreteTheme(
+    colors: Colors = ConcreteTheme.colors,
+    sizes: Sizes = ConcreteTheme.sizes,
     content: @Composable () -> Unit,
 ) {
     val rememberedColors = remember { colors.copy() }.apply { updateColorsFrom(colors) }
@@ -25,7 +25,7 @@ public fun StillbirthTheme(
     )
 }
 
-public object StillbirthTheme {
+public object ConcreteTheme {
 
     public val colors: Colors
         @Composable

@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 
 @Composable
 public fun BottomBar(
@@ -14,7 +14,7 @@ public fun BottomBar(
 ) {
     Column(
         modifier = modifier
-            .background(color = StillbirthTheme.colors.layer.foreground)
+            .background(color = ConcreteTheme.colors.layer.foreground)
             .fillMaxWidth(),
     ) {
         Divider()

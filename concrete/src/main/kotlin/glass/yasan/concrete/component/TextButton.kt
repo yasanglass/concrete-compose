@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import glass.yasan.spine.compose.util.adaptiveContentColor
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 
 
 @Composable
@@ -30,11 +30,11 @@ public fun TextButton(
     iconStart: ImageVector? = null,
     iconEnd: ImageVector? = null,
     shape: Shape = RectangleShape,
-    backgroundColor: Color = StillbirthTheme.colors.layer.foreground,
+    backgroundColor: Color = ConcreteTheme.colors.layer.foreground,
     contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
     border: BorderStroke? = BorderStroke(
-        width = StillbirthTheme.sizes.borderStrokeWidth,
-        color = StillbirthTheme.colors.layer.background,
+        width = ConcreteTheme.sizes.borderStrokeWidth,
+        color = ConcreteTheme.colors.layer.background,
     ),
     enabled: Boolean = true,
 ) {

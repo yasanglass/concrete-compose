@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import glass.yasan.spine.compose.util.adaptiveContentColor
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 
 @Composable
 public fun Button(
@@ -16,11 +16,11 @@ public fun Button(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     shape: Shape = RectangleShape,
-    backgroundColor: Color = StillbirthTheme.colors.layer.foreground,
+    backgroundColor: Color = ConcreteTheme.colors.layer.foreground,
     contentColor: Color = adaptiveContentColor(backgroundColor = backgroundColor),
     border: BorderStroke? = BorderStroke(
-        width = StillbirthTheme.sizes.borderStrokeWidth,
-        color = StillbirthTheme.colors.layer.background,
+        width = ConcreteTheme.sizes.borderStrokeWidth,
+        color = ConcreteTheme.colors.layer.background,
     ),
     enabled: Boolean = true,
 ) {

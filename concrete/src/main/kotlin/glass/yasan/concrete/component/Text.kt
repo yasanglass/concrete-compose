@@ -13,7 +13,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import glass.yasan.spine.compose.type.rubikFamily
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 import androidx.compose.material3.Text as Material3Text
 
 @Composable
@@ -57,9 +57,9 @@ public fun Text(
 @Preview
 @Composable
 private fun TextPreview() {
-    StillbirthTheme {
+    ConcreteTheme {
         Surface(
-            color = StillbirthTheme.colors.layer.foreground,
+            color = ConcreteTheme.colors.layer.foreground,
         ) {
             Text(
                 text = "Hello World",

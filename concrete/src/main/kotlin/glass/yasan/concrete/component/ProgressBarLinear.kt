@@ -5,12 +5,12 @@ import androidx.compose.material3.LinearProgressIndicator as Material3LinearProg
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import glass.yasan.concrete.theme.StillbirthTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 
 @Composable
 public fun ProgressBarLinear(
     modifier: Modifier = Modifier,
-    color: Color = StillbirthTheme.colors.content.major,
+    color: Color = ConcreteTheme.colors.content.major,
 ) {
     Material3LinearProgressIndicator(
         modifier = modifier.fillMaxWidth(),
