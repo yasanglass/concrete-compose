@@ -10,8 +10,44 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import glass.yasan.concrete.theme.ConcreteTheme
 import glass.yasan.spine.compose.foundation.grid
+
+@Composable
+public fun Preference(
+    title: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    description: @Composable (() -> Unit)? = null,
+    paddingVertical: Dp = 2.grid,
+    paddingHorizontal: Dp = 2.grid,
+    start: @Composable (() -> Unit)? = null,
+    end: @Composable (() -> Unit)? = null,
+) {
+
+    TopBar(
+        modifier = modifier,
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(
+                    horizontal = paddingHorizontal,
+                    vertical = paddingVertical,
+                ),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            start?.let { it() }
+            Column(
+                modifier = Modifier.weight(1f),
+            ) {
+                title()
+                description?.let { it() }
+            }
+            end?.let { it() }
+        }
+    }
+}
 
 @Composable
 public fun Preference(
@@ -22,28 +58,20 @@ public fun Preference(
     start: @Composable (() -> Unit)? = null,
     end: @Composable (() -> Unit)? = null,
 ) {
-    val paddingValue = if (applyPaddings) 2.grid else 0.grid
+    val paddingHorizontal = if (applyPaddings) 2.grid else 0.grid
+    val paddingVertical = if (applyPaddings) 1.grid else 0.grid
 
-    TopBar(
+    Preference(
+        title = title,
         modifier = modifier,
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(paddingValue),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            start?.let { it() }
-            Column(
-                modifier = Modifier.weight(1f),
-            ){
-                title()
-                description?.let { it() }
-            }
-            end?.let { it() }
-        }
-    }
+        description = description,
+        paddingVertical = paddingVertical,
+        paddingHorizontal = paddingHorizontal,
+        start = start,
+        end = end,
+    )
 }
+
 
 // region Preview
 
