@@ -1,6 +1,6 @@
 [versions]
 androidGradlePluginVersion = "8.0.2"
-androidxComposeBomVersion = "2023.10.01"
+androidxComposeBomVersion = "2024.02.00"
 androidxComposeCompilerVersion = "1.5.3"
 androidxCoreKtxVersion = "1.12.0"
 jetbrainsKotlinVersion = "1.9.10"
