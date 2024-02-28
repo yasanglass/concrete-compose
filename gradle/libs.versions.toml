@@ -4,7 +4,7 @@ androidxComposeBomVersion = "2024.02.01"
 androidxComposeCompilerVersion = "1.5.10"
 androidxCoreKtxVersion = "1.12.0"
 jetbrainsKotlinVersion = "1.9.22"
-yasanSpineVersion = "4.3.3"
+yasanSpineVersion = "4.4.0"
 
 [libraries]
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBomVersion" }
