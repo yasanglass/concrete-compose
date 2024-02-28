@@ -19,7 +19,7 @@ public fun Preference(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     description: @Composable (() -> Unit)? = null,
-    paddingVertical: Dp = 2.grid,
+    paddingVertical: Dp = 1.grid,
     paddingHorizontal: Dp = 2.grid,
     start: @Composable (() -> Unit)? = null,
     end: @Composable (() -> Unit)? = null,
