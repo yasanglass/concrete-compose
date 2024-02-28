@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import glass.yasan.concrete.theme.ConcreteTheme
-import androidx.compose.material3.Divider as Material3Divider
+import androidx.compose.material3.HorizontalDivider as Material3HorizontalDivider
 
 @Composable
 public fun Divider(
@@ -14,9 +14,9 @@ public fun Divider(
     thickness: Dp = ConcreteTheme.sizes.borderStrokeWidth,
 ) {
 
-    Material3Divider(
+    Material3HorizontalDivider(
         modifier = modifier,
-        color = color,
         thickness = thickness,
+        color = color
     )
 }
