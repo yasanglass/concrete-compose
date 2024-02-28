@@ -8,6 +8,7 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.sp
 import glass.yasan.concrete.theme.ConcreteTheme
+import glass.yasan.spine.compose.foundation.grid
 import androidx.compose.material3.Switch as Material3Switch
 
 @Composable
@@ -17,6 +18,7 @@ public fun Switch(
     modifier: Modifier = Modifier,
     description: String? = null,
     onCheckedChange: (Boolean) -> Unit,
+    enabled: Boolean = true,
 ) {
     Preference(
         title = {
@@ -36,13 +38,14 @@ public fun Switch(
             }
         },
         modifier = modifier
-            .clickable {
+            .clickable(enabled = enabled) {
                 onCheckedChange(!checked)
             },
         end = {
             Material3Switch(
                 checked = checked,
                 onCheckedChange = onCheckedChange,
+                enabled = enabled,
             )
         },
     )
@@ -53,13 +56,17 @@ public fun Switch(
 internal enum class SwitchPreviewParams(
     val title: String = "Title",
     val description: String? = "Description",
-    val checked: Boolean = true
+    val checked: Boolean = true,
+    val enabled: Boolean = true
 ) {
     Unchecked(
         checked = false,
     ),
     WithoutDescription(
         description = null,
+    ),
+    Disabled(
+        enabled = false,
     ),
 }
 
@@ -80,6 +87,7 @@ internal fun SwitchPreview(
                 description = description,
                 checked = checked,
                 onCheckedChange = {},
+                enabled = enabled,
             )
         }
     }
