@@ -14,32 +14,30 @@ import androidx.compose.material3.Switch as Material3Switch
 @Composable
 public fun Switch(
     title: String,
-    checked: Boolean,
+    checked: Boolean?,
     modifier: Modifier = Modifier,
     description: String? = null,
     onCheckedChange: (Boolean) -> Unit,
-    enabled: Boolean = true,
 ) {
     Switch(
         title = title,
-        checked = checked,
+        checked = checked ?: false,
         modifier = modifier,
         description = description,
         onCheckedChange = onCheckedChange,
-        enabled = enabled,
+        enabled = checked != null,
     )
 }
 
 @Composable
 public fun Switch(
     title: String,
-    checked: Boolean?,
+    checked: Boolean,
     modifier: Modifier = Modifier,
     description: String? = null,
     onCheckedChange: (Boolean) -> Unit,
+    enabled: Boolean = true,
 ) {
-    val enabled = checked != null
-
     Preference(
         title = {
             Text(
@@ -59,13 +57,11 @@ public fun Switch(
         },
         modifier = modifier
             .clickable(enabled = enabled) {
-                checked?.let {
-                    onCheckedChange(!it)
-                }
+                onCheckedChange(!checked)
             },
         end = {
             Material3Switch(
-                checked = checked ?: false,
+                checked = checked,
                 onCheckedChange = onCheckedChange,
                 enabled = enabled,
             )
