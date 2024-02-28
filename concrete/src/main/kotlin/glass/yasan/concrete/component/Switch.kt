@@ -20,6 +20,26 @@ public fun Switch(
     onCheckedChange: (Boolean) -> Unit,
     enabled: Boolean = true,
 ) {
+    Switch(
+        title = title,
+        checked = checked,
+        modifier = modifier,
+        description = description,
+        onCheckedChange = onCheckedChange,
+        enabled = enabled,
+    )
+}
+
+@Composable
+public fun Switch(
+    title: String,
+    checked: Boolean?,
+    modifier: Modifier = Modifier,
+    description: String? = null,
+    onCheckedChange: (Boolean) -> Unit,
+) {
+    val enabled = checked != null
+
     Preference(
         title = {
             Text(
@@ -39,11 +59,13 @@ public fun Switch(
         },
         modifier = modifier
             .clickable(enabled = enabled) {
-                onCheckedChange(!checked)
+                checked?.let {
+                    onCheckedChange(!it)
+                }
             },
         end = {
             Material3Switch(
-                checked = checked,
+                checked = checked ?: false,
                 onCheckedChange = onCheckedChange,
                 enabled = enabled,
             )
