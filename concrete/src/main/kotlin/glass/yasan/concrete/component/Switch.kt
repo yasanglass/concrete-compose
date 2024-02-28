@@ -48,6 +48,7 @@ public fun Switch(
                 enabled = enabled,
             )
         },
+        paddingVertical = 0.25f.grid,
     )
 }
 
