@@ -1,10 +1,9 @@
 [versions]
 androidGradlePluginVersion = "8.2.2"
 androidxComposeBomVersion = "2024.02.01"
-androidxComposeCompilerVersion = "1.5.3"
+androidxComposeCompilerVersion = "1.5.10"
 androidxCoreKtxVersion = "1.12.0"
-jetbrainsKotlinVersion = "1.9.10"
-junitVersion = "4.13.2"
+jetbrainsKotlinVersion = "1.9.22"
 yasanSpineVersion = "4.3.3"
 
 [libraries]
@@ -17,7 +16,6 @@ androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graph
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCoreKtxVersion" }
-junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
 yasan-spine = { group = "com.github.yasanglass", name = "spine", version.ref = "yasanSpineVersion" }
 
 [plugins]
