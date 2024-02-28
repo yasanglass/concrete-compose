@@ -24,28 +24,24 @@ public fun Preference(
     start: @Composable (() -> Unit)? = null,
     end: @Composable (() -> Unit)? = null,
 ) {
-
-    TopBar(
-        modifier = modifier,
+    Row(
+        modifier = modifier
+            .background(color = ConcreteTheme.colors.layer.foreground)
+            .fillMaxWidth()
+            .padding(
+                horizontal = paddingHorizontal,
+                vertical = paddingVertical,
+            ),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(
-                    horizontal = paddingHorizontal,
-                    vertical = paddingVertical,
-                ),
-            verticalAlignment = Alignment.CenterVertically,
+        start?.let { it() }
+        Column(
+            modifier = Modifier.weight(1f),
         ) {
-            start?.let { it() }
-            Column(
-                modifier = Modifier.weight(1f),
-            ) {
-                title()
-                description?.let { it() }
-            }
-            end?.let { it() }
+            title()
+            description?.let { it() }
         }
+        end?.let { it() }
     }
 }
 
