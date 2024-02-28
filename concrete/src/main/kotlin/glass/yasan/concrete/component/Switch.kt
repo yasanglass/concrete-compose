@@ -1,5 +1,6 @@
 package glass.yasan.concrete.component
 
+import androidx.compose.foundation.clickable
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -34,7 +35,10 @@ public fun Switch(
                 )
             }
         },
-        modifier = modifier,
+        modifier = modifier
+            .clickable {
+                onCheckedChange(!checked)
+            },
         end = {
             Material3Switch(
                 checked = checked,
