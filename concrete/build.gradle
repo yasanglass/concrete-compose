@@ -42,6 +42,8 @@ dependencies {
     implementation libs.yasan.spine
 
     debugImplementation libs.androidx.compose.ui.tooling
+
+    lintChecks libs.slack.lint.compose
 }
 
 kotlin {
