@@ -33,9 +33,9 @@ public fun Switch(
 public fun Switch(
     title: String,
     checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
     description: String? = null,
-    onCheckedChange: (Boolean) -> Unit,
     enabled: Boolean = true,
 ) {
     Preference(
