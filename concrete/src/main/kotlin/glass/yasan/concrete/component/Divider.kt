@@ -12,11 +12,13 @@ public fun Divider(
     modifier: Modifier = Modifier,
     color: Color = ConcreteTheme.colors.layer.background,
     thickness: Dp = ConcreteTheme.sizes.borderStrokeWidth,
+    enabled: Boolean = true,
 ) {
-
-    Material3HorizontalDivider(
-        modifier = modifier,
-        thickness = thickness,
-        color = color
-    )
+    if (enabled) {
+        Material3HorizontalDivider(
+            modifier = modifier,
+            thickness = thickness,
+            color = color
+        )
+    }
 }
