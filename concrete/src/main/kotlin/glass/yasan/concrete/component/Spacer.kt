@@ -11,9 +11,10 @@ import androidx.compose.ui.unit.Dp
 public fun Spacer(
     width: Dp,
     height: Dp,
+    modifier: Modifier = Modifier,
 ) {
     Spacer(
-        modifier = Modifier
+        modifier = modifier
             .width(width)
             .height(height),
     )
