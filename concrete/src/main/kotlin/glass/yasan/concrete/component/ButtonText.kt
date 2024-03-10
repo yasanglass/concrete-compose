@@ -30,7 +30,7 @@ public fun ButtonText(
                         imageVector = icon,
                         contentDescription = null,
                         tint = color,
-                        modifier = Modifier.padding(2.grid),
+                        modifier = Modifier.padding(start = 2.grid),
                     )
                 }
                 Spacer(width = 2.grid)
@@ -48,7 +48,7 @@ public fun ButtonText(
                         imageVector = icon,
                         contentDescription = null,
                         tint = color,
-                        modifier = Modifier.padding(2.grid),
+                        modifier = Modifier.padding(end = 2.grid),
                     )
                 }
             }
