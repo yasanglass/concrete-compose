@@ -7,7 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import glass.yasan.concrete.component.ButtonText
-import glass.yasan.concrete.component.Spacer
+import glass.yasan.concrete.component.SpacerVertical
 import glass.yasan.concrete.component.Text
 import glass.yasan.spine.compose.foundation.grid
 
@@ -26,9 +26,9 @@ public fun TextWithTextButton(
             .fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(height = 2.grid)
+        SpacerVertical(height = 2.grid)
         Text(text = text)
-        Spacer(height = 2.grid)
+        SpacerVertical(height = 2.grid)
         ButtonText(
             text = buttonText,
             startIcon = buttonStartIcon,
@@ -36,6 +36,6 @@ public fun TextWithTextButton(
             onClick = onClick,
             modifier = buttonModifier,
         )
-        Spacer(height = 2.grid)
+        SpacerVertical(height = 2.grid)
     }
 }

@@ -33,7 +33,7 @@ public fun ButtonText(
                         modifier = Modifier.padding(start = 2.grid),
                     )
                 }
-                Spacer(width = 2.grid)
+                SpacerHorizontal(width = 2.grid)
                 Text(
                     text = text,
                     color = color,
@@ -42,7 +42,7 @@ public fun ButtonText(
                             vertical = 2.grid,
                         ),
                 )
-                Spacer(width = 2.grid)
+                SpacerHorizontal(width = 2.grid)
                 endIcon?.let { icon ->
                     Icon(
                         imageVector = icon,
