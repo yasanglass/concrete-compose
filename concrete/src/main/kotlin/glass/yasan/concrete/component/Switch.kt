@@ -45,6 +45,7 @@ public fun Switch(
                 text = title,
                 color = ConcreteTheme.colors.content.major,
                 fontSize = 16.sp,
+                modifier = Modifier.padding(vertical = 1.grid)
             )
         },
         description = description?.let {
@@ -53,6 +54,7 @@ public fun Switch(
                     text = it,
                     color = ConcreteTheme.colors.content.minor,
                     fontSize = 14.sp,
+                    modifier = Modifier.padding(bottom = 1.grid)
                 )
             }
         },
