@@ -1,7 +1,5 @@
 package glass.yasan.concrete.component
 
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
@@ -24,7 +22,7 @@ public fun Spacer(
 }
 
 @Composable
-public fun RowScope.Spacer(
+public fun SpacerHorizontal(
     width: Dp,
     modifier: Modifier = Modifier,
 ) {
@@ -36,7 +34,7 @@ public fun RowScope.Spacer(
 }
 
 @Composable
-public fun ColumnScope.Spacer(
+public fun SpacerVertical(
     height: Dp,
     modifier: Modifier = Modifier,
 ) {
