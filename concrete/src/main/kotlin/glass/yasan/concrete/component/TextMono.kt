@@ -9,6 +9,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
+import glass.yasan.concrete.component.internal.ConcretePreviews
+import glass.yasan.concrete.component.internal.PreviewTheme
+import glass.yasan.concrete.theme.ConcreteTheme
 import glass.yasan.spine.compose.type.rubikMonoFamily
 
 @Composable
@@ -46,4 +49,15 @@ public fun TextMono(
         maxLines = maxLines,
         minLines = minLines,
     )
+}
+
+@ConcretePreviews
+@Composable
+private fun TextMonoPreview() {
+    PreviewTheme {
+        TextMono(
+            text = "Concrete Text Mono",
+            color = ConcreteTheme.colors.content.major,
+        )
+    }
 }

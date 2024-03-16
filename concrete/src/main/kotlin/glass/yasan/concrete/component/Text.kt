@@ -1,6 +1,5 @@
 package glass.yasan.concrete.component
 
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -10,10 +9,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
-import glass.yasan.spine.compose.type.rubikFamily
+import glass.yasan.concrete.component.internal.ConcretePreviews
+import glass.yasan.concrete.component.internal.PreviewTheme
 import glass.yasan.concrete.theme.ConcreteTheme
+import glass.yasan.spine.compose.type.rubikFamily
 import androidx.compose.material3.Text as Material3Text
 
 @Composable
@@ -54,17 +54,12 @@ public fun Text(
     )
 }
 
-@Preview
+@ConcretePreviews
 @Composable
 private fun TextPreview() {
-    ConcreteTheme {
-        Surface(
-            color = ConcreteTheme.colors.layer.foreground,
-        ) {
-            Text(
-                text = "Hello World",
-                color = Color.Black,
-            )
-        }
+    PreviewTheme {
+        Text(
+            text = "Concrete Text",
+        )
     }
 }

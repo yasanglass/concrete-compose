@@ -9,9 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import glass.yasan.concrete.component.Text
+import glass.yasan.concrete.component.internal.ConcretePreviews
+import glass.yasan.concrete.component.internal.PreviewTheme
 import glass.yasan.concrete.theme.ConcreteTheme
 import glass.yasan.spine.compose.foundation.grid
 
@@ -72,10 +73,10 @@ public fun Preference(
 
 // region Preview
 
-@Preview
+@ConcretePreviews
 @Composable
 private fun PreferenceLayoutPreview() {
-    ConcreteTheme {
+    PreviewTheme {
         Preference(
             start = {
                 Text(

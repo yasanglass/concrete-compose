@@ -4,11 +4,14 @@ import androidx.compose.ui.graphics.Color
 
 internal object ColorTokens {
 
+    // Theme
+    val themePrimary = Color(0xFF006970)
+    val themeSecondary = Color(0xFF9f410c)
+
     // Light
     val layerForegroundLight = Color(0xFFFFFFFF)
     val layerMidgroundLight = Color(0xFFEEEEEE)
     val layerBackgroundLight = Color(0xFFD8D8D8)
-    val layerBackgroundOppositeLight = Color(0xFF000000)
     val contentMajorLight = Color(0xFF212121)
     val contentMinorLight = Color(0xFF666666)
 

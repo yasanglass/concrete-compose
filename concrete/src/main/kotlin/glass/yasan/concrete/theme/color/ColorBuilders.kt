@@ -3,15 +3,24 @@ package glass.yasan.concrete.theme.color
 import androidx.compose.ui.graphics.Color
 import glass.yasan.concrete.theme.color.Colors.Content
 import glass.yasan.concrete.theme.color.Colors.Layer
+import glass.yasan.concrete.theme.color.Colors.Theme
 
 public fun lightColors(
+    themePrimary: Color = ColorTokens.themePrimary,
+    themeSecondary: Color = ColorTokens.themeSecondary,
     layerForeground: Color = ColorTokens.layerForegroundLight,
     layerMidground: Color = ColorTokens.layerMidgroundLight,
     layerBackground: Color = ColorTokens.layerBackgroundLight,
-    layerBackgroundOpposite: Color = ColorTokens.layerBackgroundOppositeLight,
+    layerForegroundInverse: Color = ColorTokens.layerForegroundDark,
+    layerMidgroundInverse: Color = ColorTokens.layerMidgroundDark,
+    layerBackgroundInverse: Color = ColorTokens.layerBackgroundDark,
     textTitle: Color = ColorTokens.contentMajorLight,
     textDescription: Color = ColorTokens.contentMinorLight,
 ): Colors = Colors(
+    theme = Theme(
+        primary = themePrimary,
+        secondary = themeSecondary,
+    ),
     content = Content(
         major = textTitle,
         minor = textDescription,
@@ -20,24 +29,40 @@ public fun lightColors(
         foreground = layerForeground,
         midground = layerMidground,
         background = layerBackground,
-        backgroundOpposite = layerBackgroundOpposite,
+        foregroundInverse = layerForegroundInverse,
+        midgroundInverse = layerMidgroundInverse,
+        backgroundInverse = layerBackgroundInverse,
     ),
     isLight = true,
 )
 
 public fun darkColors(
+    themePrimary: Color = ColorTokens.themePrimary,
+    themeSecondary: Color = ColorTokens.themeSecondary,
     layerForeground: Color = ColorTokens.layerForegroundDark,
     layerMidground: Color = ColorTokens.layerMidgroundDark,
     layerBackground: Color = ColorTokens.layerBackgroundDark,
-    layerBackgroundOpposite: Color = ColorTokens.layerBackgroundOppositeDark,
+    layerForegroundInverse: Color = ColorTokens.layerForegroundLight,
+    layerMidgroundInverse: Color = ColorTokens.layerMidgroundLight,
+    layerBackgroundInverse: Color = ColorTokens.layerBackgroundLight,
     textTitle: Color = ColorTokens.contentMajorDark,
     textDescription: Color = ColorTokens.contentMinorDark,
 ): Colors = Colors(
-    layerForeground = layerForeground,
-    layerMidground = layerMidground,
-    layerBackground = layerBackground,
-    layerBackgroundOpposite = layerBackgroundOpposite,
-    contentMajor = textTitle,
-    contentMinor = textDescription,
-    isLight = false,
+    theme = Theme(
+        primary = themePrimary,
+        secondary = themeSecondary,
+    ),
+    content = Content(
+        major = textTitle,
+        minor = textDescription,
+    ),
+    layer = Layer(
+        foreground = layerForeground,
+        midground = layerMidground,
+        background = layerBackground,
+        foregroundInverse = layerForegroundInverse,
+        midgroundInverse = layerMidgroundInverse,
+        backgroundInverse = layerBackgroundInverse,
+    ),
+    isLight = true,
 )

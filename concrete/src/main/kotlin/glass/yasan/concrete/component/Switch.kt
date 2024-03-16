@@ -3,11 +3,14 @@ package glass.yasan.concrete.component
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.sp
+import glass.yasan.concrete.component.internal.ConcretePreviews
+import glass.yasan.concrete.component.internal.PreviewTheme
 import glass.yasan.concrete.component.preference.Preference
 import glass.yasan.concrete.theme.ConcreteTheme
 import glass.yasan.spine.compose.foundation.grid
@@ -91,25 +94,34 @@ internal enum class SwitchPreviewParams(
     Disabled(
         enabled = false,
     ),
+    DisabledUnChecked(
+        enabled = false,
+        checked = false,
+    ),
 }
 
 internal class SwitchPreviewParamsProvider : PreviewParameterProvider<SwitchPreviewParams> {
     override val values: Sequence<SwitchPreviewParams> = SwitchPreviewParams.entries.asSequence()
 }
 
-@Preview
+@ConcretePreviews
 @Composable
 internal fun SwitchPreview(
     @PreviewParameter(SwitchPreviewParamsProvider::class)
     params: SwitchPreviewParams,
 ) {
-    ConcreteTheme {
+    PreviewTheme {
         with(params) {
+            val mutableChecked = remember {
+                mutableStateOf(checked)
+            }
             Switch(
                 title = title,
                 description = description,
-                checked = checked,
-                onCheckedChange = {},
+                checked = mutableChecked.value,
+                onCheckedChange = {
+                    mutableChecked.value = it
+                },
                 enabled = enabled,
             )
         }
