@@ -1,10 +1,10 @@
 # Concrete
 
-[![Build](https://github.com/yasanglass/concrete-compose/workflows/Build/badge.svg)](https://github.com/yasanglass/concrete-compose/actions/workflows/build.yml)
-[![](https://jitpack.io/v/yasanglass/concrete-compose.svg)](https://jitpack.io/#yasanglass/concrete-compose)
-[![](https://jitpack.io/v/yasanglass/concrete-compose/month.svg)](https://jitpack.io/#yasanglass/concrete-compose)
+[![Build status](https://github.com/yasanglass/concrete-compose/workflows/Build/badge.svg)](https://github.com/yasanglass/concrete-compose/actions/workflows/build.yml)
+[![Latest release](https://jitpack.io/v/yasanglass/concrete-compose.svg)](https://jitpack.io/#yasanglass/concrete-compose)
+[![Monthly downloads](https://jitpack.io/v/yasanglass/concrete-compose/month.svg)](https://jitpack.io/#yasanglass/concrete-compose)
 
-WIP reconstruction of my original design language in Jetpack Compose. 
+WIP reconstruction of my original design language in Jetpack Compose. The implementation is highly inspired by [orbit-compose](https://github.com/kiwicom/orbit-compose).
 
 ## Download
 
