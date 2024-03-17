@@ -21,11 +21,12 @@ public fun PreferenceButton(
     endIcon: ImageVector? = null,
     description: String? = null,
     enabled: Boolean = true,
+    uppercaseTitle: Boolean = false,
 ) {
     Preference(
         title = {
             Text(
-                text = title,
+                text = if (uppercaseTitle) title.uppercase() else title,
                 color = ConcreteTheme.colors.content.major,
                 fontSize = 16.sp,
             )
