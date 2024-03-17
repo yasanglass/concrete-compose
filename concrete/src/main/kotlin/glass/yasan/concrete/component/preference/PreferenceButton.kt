@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.sp
 import glass.yasan.concrete.component.Icon
+import glass.yasan.concrete.component.SpacerHorizontal
 import glass.yasan.concrete.component.Text
 import glass.yasan.concrete.theme.ConcreteTheme
 import glass.yasan.spine.compose.foundation.grid
@@ -44,21 +45,25 @@ public fun PreferenceButton(
                 onClick = onClick,
             ),
         start = {
-            startIcon?.let { icon ->
+            if (startIcon != null) {
                 Icon(
-                    imageVector = icon,
+                    imageVector = startIcon,
                     contentDescription = null,
                     modifier = Modifier.padding(2.grid),
                 )
+            } else {
+                SpacerHorizontal(width = 2.grid)
             }
         },
         end = {
-            endIcon?.let { icon ->
+            if (endIcon != null) {
                 Icon(
-                    imageVector = icon,
+                    imageVector = endIcon,
                     contentDescription = null,
                     modifier = Modifier.padding(2.grid),
                 )
+            } else {
+                SpacerHorizontal(width = 2.grid)
             }
         },
         applyPaddings = false,
