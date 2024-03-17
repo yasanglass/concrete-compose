@@ -63,6 +63,7 @@ public fun PreferenceButton(
                 Icon(
                     imageVector = endIcon,
                     contentDescription = null,
+                    tint = ConcreteTheme.colors.content.major,
                     modifier = Modifier.padding(2.grid),
                 )
             } else {
@@ -103,6 +104,7 @@ public fun PreferenceButton(
                 Icon(
                     imageVector = startIcon,
                     contentDescription = null,
+                    tint = contentColor,
                     modifier = Modifier.padding(2.grid),
                 )
             } else {
@@ -114,6 +116,7 @@ public fun PreferenceButton(
                 Icon(
                     imageVector = endIcon,
                     contentDescription = null,
+                    tint = contentColor,
                     modifier = Modifier.padding(2.grid),
                 )
             } else {
