@@ -1,4 +1,4 @@
-package glass.yasan.concrete.component
+package glass.yasan.concrete.component.preference
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
@@ -9,22 +9,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.sp
+import glass.yasan.concrete.component.Text
 import glass.yasan.concrete.component.internal.ConcretePreviews
 import glass.yasan.concrete.component.internal.PreviewTheme
-import glass.yasan.concrete.component.preference.Preference
 import glass.yasan.concrete.theme.ConcreteTheme
 import glass.yasan.spine.compose.foundation.grid
 import androidx.compose.material3.Switch as Material3Switch
 
 @Composable
-public fun Switch(
+public fun PreferenceSwitch(
     title: String,
     checked: Boolean?,
     modifier: Modifier = Modifier,
     description: String? = null,
     onCheckedChange: (Boolean) -> Unit,
 ) {
-    Switch(
+    PreferenceSwitch(
         title = title,
         checked = checked ?: false,
         modifier = modifier,
@@ -35,7 +35,7 @@ public fun Switch(
 }
 
 @Composable
-public fun Switch(
+public fun PreferenceSwitch(
     title: String,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit,
@@ -79,11 +79,11 @@ public fun Switch(
 
 // region Preview
 
-internal enum class SwitchPreviewParams(
+internal enum class PreferenceSwitchPreviewParams(
     val title: String = "Title",
     val description: String? = "Description",
     val checked: Boolean = true,
-    val enabled: Boolean = true
+    val enabled: Boolean = true,
 ) {
     Unchecked(
         checked = false,
@@ -100,22 +100,24 @@ internal enum class SwitchPreviewParams(
     ),
 }
 
-internal class SwitchPreviewParamsProvider : PreviewParameterProvider<SwitchPreviewParams> {
-    override val values: Sequence<SwitchPreviewParams> = SwitchPreviewParams.entries.asSequence()
+internal class SwitchPreviewParamsProvider :
+    PreviewParameterProvider<PreferenceSwitchPreviewParams> {
+    override val values: Sequence<PreferenceSwitchPreviewParams> =
+        PreferenceSwitchPreviewParams.entries.asSequence()
 }
 
 @ConcretePreviews
 @Composable
 internal fun SwitchPreview(
     @PreviewParameter(SwitchPreviewParamsProvider::class)
-    params: SwitchPreviewParams,
+    params: PreferenceSwitchPreviewParams,
 ) {
     PreviewTheme {
         with(params) {
             val mutableChecked = remember {
                 mutableStateOf(checked)
             }
-            Switch(
+            PreferenceSwitch(
                 title = title,
                 description = description,
                 checked = mutableChecked.value,
