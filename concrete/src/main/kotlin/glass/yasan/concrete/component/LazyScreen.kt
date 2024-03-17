@@ -13,6 +13,8 @@ import glass.yasan.concrete.theme.ConcreteTheme
 public fun LazyScreen(
     content: LazyListScope.() -> Unit,
     modifier: Modifier = Modifier,
+    showTopBarDivider: Boolean = true,
+    showBottomBarDivider: Boolean = true,
     topBar: (@Composable () -> Unit)? = null,
     bottomBar: (@Composable () -> Unit)? = null,
 ) {
@@ -27,7 +29,7 @@ public fun LazyScreen(
                     .background(ConcreteTheme.colors.layer.foreground)
             ) {
                 topBar()
-                Divider()
+                Divider(enabled = showTopBarDivider)
             }
         }
         LazyColumn(
@@ -39,7 +41,7 @@ public fun LazyScreen(
                 modifier = Modifier
                     .background(ConcreteTheme.colors.layer.foreground)
             ) {
-                Divider()
+                Divider(enabled = showBottomBarDivider)
                 bottomBar()
             }
         }
