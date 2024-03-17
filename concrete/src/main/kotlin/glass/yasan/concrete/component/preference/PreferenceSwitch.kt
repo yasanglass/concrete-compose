@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.sp
+import glass.yasan.concrete.component.SpacerVertical
 import glass.yasan.concrete.component.Text
 import glass.yasan.concrete.component.internal.ConcretePreviews
 import glass.yasan.concrete.component.internal.PreviewTheme
@@ -49,17 +50,19 @@ public fun PreferenceSwitch(
                 text = title,
                 color = ConcreteTheme.colors.content.major,
                 fontSize = 16.sp,
-                modifier = Modifier.padding(vertical = 1.grid)
+                modifier = Modifier.padding(top = 1.grid),
             )
         },
-        description = description?.let {
-            {
+        description = {
+            if (description != null) {
                 Text(
-                    text = it,
+                    text = description,
                     color = ConcreteTheme.colors.content.minor,
                     fontSize = 14.sp,
                     modifier = Modifier.padding(bottom = 1.grid)
                 )
+            } else {
+                SpacerVertical(height = 1.grid)
             }
         },
         modifier = modifier
