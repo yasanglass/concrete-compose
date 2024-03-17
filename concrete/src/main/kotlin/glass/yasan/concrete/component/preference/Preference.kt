@@ -21,6 +21,7 @@ public fun Preference(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     description: @Composable (() -> Unit)? = null,
+    backgroundColor: Color = ConcreteTheme.colors.layer.foreground,
     paddingVertical: Dp = 1.grid,
     paddingHorizontal: Dp = 2.grid,
     start: @Composable (() -> Unit)? = null,
@@ -28,7 +29,7 @@ public fun Preference(
 ) {
     Row(
         modifier = modifier
-            .background(color = ConcreteTheme.colors.layer.foreground)
+            .background(color = backgroundColor)
             .fillMaxWidth()
             .padding(
                 horizontal = paddingHorizontal,
@@ -52,6 +53,7 @@ public fun Preference(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     description: @Composable (() -> Unit)? = null,
+    backgroundColor: Color = ConcreteTheme.colors.layer.foreground,
     applyPaddings: Boolean = true,
     start: @Composable (() -> Unit)? = null,
     end: @Composable (() -> Unit)? = null,
@@ -67,6 +69,7 @@ public fun Preference(
         paddingHorizontal = paddingHorizontal,
         start = start,
         end = end,
+        backgroundColor = backgroundColor,
     )
 }
 
