@@ -14,9 +14,9 @@ import glass.yasan.spine.compose.foundation.grid
 @Composable
 public fun PreferenceButton(
     title: String,
-    startIcon: ImageVector,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    startIcon: ImageVector? = null,
     endIcon: ImageVector? = null,
     description: String? = null,
     enabled: Boolean = true,
@@ -44,11 +44,13 @@ public fun PreferenceButton(
                 onClick = onClick,
             ),
         start = {
-            Icon(
-                imageVector = startIcon,
-                contentDescription = null,
-                modifier = Modifier.padding(2.grid),
-            )
+            startIcon?.let { icon ->
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    modifier = Modifier.padding(2.grid),
+                )
+            }
         },
         end = {
             endIcon?.let { icon ->
