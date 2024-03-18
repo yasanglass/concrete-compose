@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
-import glass.yasan.concrete.component.defaults.concreteTextFieldDefaults
+import glass.yasan.concrete.component.defaults.textFieldDefaultColors
 import androidx.compose.material3.TextField as Material3TextField
 
 @Composable
@@ -63,7 +63,7 @@ public fun TextField(
         minLines = minLines,
         interactionSource = interactionSource,
         shape = shape,
-        colors = concreteTextFieldDefaults().colors(),
+        colors = textFieldDefaultColors(),
     )
 }
 
