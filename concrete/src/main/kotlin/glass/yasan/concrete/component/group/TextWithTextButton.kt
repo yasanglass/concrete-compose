@@ -11,6 +11,9 @@ import glass.yasan.concrete.component.SpacerVertical
 import glass.yasan.concrete.component.Text
 import glass.yasan.spine.compose.foundation.grid
 
+/**
+ * A simple column with a text on top and a button on the bottom.
+ */
 @Composable
 public fun TextWithTextButton(
     text: String,
