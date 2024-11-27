@@ -3,7 +3,7 @@ androidGradlePluginVersion = "8.7.2"
 androidxComposeBomVersion = "2024.11.00"
 androidxComposeCompilerVersion = "1.5.15"
 androidxCoreKtxVersion = "1.15.0"
-jetbrainsKotlinVersion = "2.0.21"
+jetbrainsKotlinVersion = "2.1.0"
 slackLintComposeVersion = "1.4.2"
 yasanSpineVersion = "4.6.0"
 
